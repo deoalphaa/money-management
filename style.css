@@ -22,7 +22,8 @@ p{
 
 h2{
     display: block;
-    margin: 0;
+    margin: auto;
+    width: 50%;
 }
 
 h3{
@@ -32,7 +33,6 @@ h3{
     margin: 0;
     padding: 0;
     button{
-        
         background: rgb(255, 255, 255);
         border-style: solid;
         border-radius: 5px;
