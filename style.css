@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
 }
 
 :root {
@@ -30,24 +33,66 @@
     --spacing5: 160px;
 }
 
+body {
+    min-height: 2000px;
+}
+
 h1{
     /* background awak biar keliatan aja */
     font: var(--h2);
-    background: var(--color10);
 }
 
-p{
-    /* background awak biar keliatan aja */
+.nav {
+    display: flex;                          /*biar gampang diatur*/
+    justify-content: space-between;         /*untuk jarak antara element sama kiri kanan*/
+    align-items: center;                    /*supaya semua sejajar*/
+    padding: 1.8rem 5%;                     /*rem itu bilangan dikali 16px, % itu jarak spasi kanan kiri*/
+    background-color: rgba(0, 0, 0, 0.8); /*rgba, a itu untuk transparency*/
+    border-bottom: 1px solid var(--color120);  /*line tipis dibawah navigation bar*/
+    position: fixed;                        /*biar pas di scroll navbarnya ga kemana"*/
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.nav .title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color120);
+}
+
+.navbar a {
+    color: var(--putih);
+    display: inline-block; /*biar pas di margin tetep in line*/
+    font-size: 1.1rem;
+    margin: 0 1rem;
+}
+
+.navbar a:hover {
+    color: var(--color90);
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.1rem;
+}
+
+.navbarlogo {
+    color: var(--color120);
+}
+
+.navbarlogo a:hover {
+    color: var(--color90);
+}
+
+/* p{
     font: var(--p);
     background: var(--color30);
 }
 
-h2{
-    background-color: var(--color90);
-}
-
 h3{
-    /* background awak biar keliatan aja */
     background-color: var(--color100);
     text-align: center;
     button{
@@ -59,7 +104,6 @@ h3{
         margin: 0;
         padding: 0% 5%;
     }
-    
 }
 
 footer{
@@ -73,5 +117,5 @@ footer{
 }
 
 section {
-    background: var(--color90);
-}
+    background: var(--color30);
+} */
