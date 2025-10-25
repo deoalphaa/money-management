@@ -60,7 +60,7 @@
     background-position: center; /* Center the icon */
     /* Remove text or make it transparent */
     color: none;
-    text-indent: -9999px; /* Hide text off-screen */
+    text-indent: -999999px; /* Hide text off-screen */
     /* Adjust size as needed */
     height: 30px;
     width: 30px; /* Make it square for an icon */
