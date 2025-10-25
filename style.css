@@ -65,6 +65,11 @@ h3{
 footer{
     font: var(--p);
     background: var(--color30);
+    button{
+        background: none;
+        border: none;
+        color: rgb(255, 255, 255)
+    }
 }
 
 section {

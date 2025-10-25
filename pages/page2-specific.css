@@ -9,7 +9,7 @@
 :root {
     /* ini variable, ak liat yutube ktnya lbh bagus gini */
     /* dri pada setiap element 1-1 */
-    --color1 : rgb(0, 0 ,0);
+    --color1 : rgb(0, 0, 0);
     --color10 : hsl(31, 80%, 10%);
     --color30 : hsl(31, 80%, 30%);
     --color90 : hsl(31, 57%, 60%);
@@ -40,13 +40,65 @@
         font: var(--p);
         color: aliceblue;
         display: inline-block;
-        margin: 0 20px 0 0;
+        vertical-align: middle;
         button{
             background: none;
             border: none;
-            color: rgb(255, 255, 255)
+            color: rgb(255, 255, 255);
+            cursor: pointer;
         }
     }
+    li + li { /* Selects any li that IMMEDIATELY follows another li */
+    margin-left: 20px; /* Add space ONLY to the left of subsequent items */
+    }
+
+    .home_logo button { /* Select buttons INSIDE elements with class home_logo */
+    background-image: url("../img/home_icon.png"); /* Added .png */
+    background-color: transparent;
+    background-size: contain; /* Or cover, or specific dimensions */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the icon */
+    /* Remove text or make it transparent */
+    color: none;
+    text-indent: -9999px; /* Hide text off-screen */
+    /* Adjust size as needed */
+    height: 30px;
+    width: 30px; /* Make it square for an icon */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Add pointer cursor */
+    
+    }
+
+    /* agak jelek ak hide aja
+
+    .contact_logo button {
+    background-image: url("../img/contact_icon.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: none;
+    text-indent: -9999px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    } 
+    .info_logo button {
+    background-image: url("../img/info_icon.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: none;
+    text-indent: -9999px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+
+    }*/
+
     h1 {
         font: var(--h1);
         color: aliceblue;
