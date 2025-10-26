@@ -1,4 +1,6 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+*{
     /* default utk semua element */
     color: rgb(0, 0, 0);
     margin: 0;
@@ -31,94 +33,133 @@
     --spacing5: 160px;
 }
 
-.top_section {
-    background-color: var(--color1);
-    ul {
-        list-style: none;
-    }
-    li {
-        font: var(--p);
-        color: aliceblue;
-        display: inline-block;
-        vertical-align: middle;
-        button{
-            background: none;
-            border: none;
+.side_bar{
+    background-color: rgb(80, 80, 80);
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+/*  padding: 20px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Header{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        h1{
+            font-family: "Bitcount Grid Single", system-ui;
             color: rgb(255, 255, 255);
-            cursor: pointer;
         }
     }
-    li + li { /* Selects any li that IMMEDIATELY follows another li */
-    margin-left: 20px; /* Add space ONLY to the left of subsequent items */
+    .search-container {
+        /*pusing kli buat ini co aku gpt banyak kli*/
+        background-color: blue; /*biar keliatan aja*/
+        width: 100%;
+        display: flex;
+        button{
+            border: gray; /*ni aneh kli kntl sumpah coba ko hapus ama ga hapus */
+            border-radius: 10px 0px 0px 10px;
+            width: 30px;
+            cursor: pointer;
+            padding: 0;
+        }
+        input[type=text]{
+            margin-left: 2px;
+            border-radius : 0px 10px 10px 0px; 
+            border: gray; /*ni aneh kli kntl sumpah coba ko hapus ama ga hapus */
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            opacity: 50%;
+        }
+        margin-bottom: 20px;
+
+        /*aku bingung ini buat apa de*/
+        border: 1px solid rgb(65, 65, 65); 
+        border-radius: 10px;
+        overflow: hidden;
     }
+    .pages-container{
+        /*background merah buat kliatan aja ini temp*/
+        background: rgba(255, 0, 0, 0.308);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        padding-bottom: 20px;
+        gap : 10px;
+        button{
+            margin-bottom: 10px;
+            border: none;
+            background: rgb(255, 0, 0);
+            color: var(--color120);
+            font-family: var(--ff3);
+            cursor: pointer;
+            padding: 8px 10px;
+            width: 100%;
+            text-align: left;
 
-    .home_logo button { /* Select buttons INSIDE elements with class home_logo */
-    background-image: url("../img/home_icon.png"); /* Added .png */
-    background-color: transparent;
-    background-size: contain; /* Or cover, or specific dimensions */
-    background-repeat: no-repeat;
-    background-position: center; /* Center the icon */
-    /* Remove text or make it transparent */
-    color: none;
-    text-indent: -999999px; /* Hide text off-screen */
-    /* Adjust size as needed */
-    height: 30px;
-    width: 30px; /* Make it square for an icon */
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Add pointer cursor */
-    
+            display: flex;
+            align-items: center;
+            gap : 10px;
+            border-radius: 5px;
+
+            svg{
+                margin-left: -10px;
+                stroke: white;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
     }
+    .footer-container{
+        margin-top: auto;
+        border: none;
+        background: cadetblue; 
+        color: var(--color90);
+        font-family: var(--ff3);
+        font-size: 0.9rem;
+        padding: 5px 0;
+        width: 100%;
+        text-align: left;
 
-    /* agak jelek ak hide aja
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{  
+            margin-left: 5px;
+            color: var(--color120);
+            text-align: left;
+        }
+        button{
+            border: none;
+            background-color: none;
+            background-color: transparent;
+            border: none;
+            color: var(--color120);
+            font-family: var(--ff3);
+            cursor: pointer;
+            padding: 8px 10px;
+            width: 100%;
+            text-align: left;
 
-    .contact_logo button {
-    background-image: url("../img/contact_icon.png");
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: none;
-    text-indent: -9999px;
-    height: 30px;
-    width: 30px;
-    border: none;
-    cursor: pointer;
-    } 
-    .info_logo button {
-    background-image: url("../img/info_icon.png");
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: none;
-    text-indent: -9999px;
-    height: 30px;
-    width: 30px;
-    border: none;
-    cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap : 10px;
+            border-radius: 5px;
 
-    }*/
-
-    h1 {
-        font: var(--h1);
-        color: aliceblue;
+            svg{
+                margin-left: -5px;
+                stroke: white;
+                width: 18px;
+                height: 18px;
+            }
+        }
     }
-}
-
-
-footer{
-    font: var(--p);
-    background: var(--color30);
-}
-
-.list {
-    background: var(--color90);
-    display: flex;
-    flex-direction: row;
-}
-
-.list div {
-    background-color: red;
-    margin: auto;
-    width: 100px;
 }
