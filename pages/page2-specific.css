@@ -1,30 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    /* default utk semua element */
+* {
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
 }
 
 :root {
-    /* ini variable, ak liat yutube ktnya lbh bagus gini */
-    /* dri pada setiap element 1-1 */
-    --color1 : rgb(0, 0, 0);
-    --color10 : hsl(31, 80%, 10%);
-    --color30 : hsl(31, 80%, 30%);
-    --color90 : hsl(31, 57%, 60%);
-    --color100 : hsl(0, 49%, 82%);
-    --color120 : rgb(255, 255, 255);
+    --color1: rgb(0, 0, 0);
+    --color10: hsl(31, 80%, 10%);
+    --color30: hsl(31, 80%, 30%);
+    --color90: hsl(31, 57%, 60%);
+    --color100: hsl(0, 49%, 82%);
+    --color120: rgb(255, 255, 255);
     --accent: hsl(31, 80%, 70%);
     --ff: "Noto Sans JP", serif;
     --ff2: "Fira Sans", serif;
     --ff3: "Helvetica", sans-serif;
-    --p: 1rem/1,5em var(--ff);
+    --p: 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff3);
     --h2: 600 2rem/1.2em var(--ff2);
     --spacing1: 4px;
@@ -32,140 +27,226 @@
     --spacing3: 16px;
     --spacing4: 20px;
     --spacing5: 40px;
-    --spacing5: 80px;
-    --spacing5: 160px;
 }
 
-.side_bar{
+/* ==============================
+   SIDEBAR BASE
+============================== */
+.side_bar {
     background-color: rgb(80, 80, 80);
     height: 100vh;
     width: 300px;
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
-    box-sizing: border-box;
-/*  padding: 20px; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: width 0.3s ease;
+}
 
-    .Header{
-        width: 100%;
-        margin-bottom: 20px;
-        margin-left: 10px;
-        h1{
-            font-family: "Bitcount Grid Single", system-ui;
-            color: var(--color120);
-        }
-    }
-    .search-container {
-        /*pusing kli buat ini co aku gpt banyak kli*/
-        background-color: grey; /*biar keliatan aja*/
-        width: 100%;
-        display: flex;
-        button{
-            border: gray; /*ni aneh kli kntl sumpah coba ko hapus ama ga hapus */
-            border-radius: 10px 0px 0px 10px;
-            width: 30px;
-            cursor: pointer;
-            padding: 0;
-        }
-        input[type=text]{
-            margin-left: 2px;
-            border-radius : 0px 10px 10px 0px; 
-            border: gray; /*ni aneh kli kntl sumpah coba ko hapus ama ga hapus */
-            width: 100%;
-            padding: 12px;
-            box-sizing: border-box;
-            opacity: 50%;
-        }
-        margin-bottom: 20px;
+/* ==============================
+   HEADER
+============================== */
+.side_bar .Header {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-        /*aku bingung ini buat apa de*/
-        border: 1px solid rgb(65, 65, 65); 
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .pages-container{
-        /*background merah buat kliatan aja ini temp*/
-        background: rgba(255, 0, 0, 0.308);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 90%;
-        padding-bottom: 20px;
-        gap : 10px;
-        button{
-            margin-bottom: 10px;
-            border: none;
-            background: rgb(255, 0, 0);
-            color: var(--color120);
-            font-family: var(--ff3);
-            cursor: pointer;
-            padding: 8px 10px;
-            width: 100%;
-            text-align: left;
+.side_bar .Header button {
+    border: none;
+    background: transparent;
+    color: var(--color120);
+    font-family: var(--ff3);
+    cursor: pointer;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
 
-            display: flex;
-            align-items: center;
-            gap : 10px;
-            border-radius: 5px;
+.side_bar .Header button svg {
+    stroke: white;
+}
 
-            svg{
-                margin-left: 2px;
-                stroke: white;
-                width: 20px;
-                height: 20px;
-                margin-right: 10px;
-            }
-        }
-    }
-    .footer-container{
-        margin-top: auto;
-        border: none;
-        background: cadetblue; 
-        color: var(--color90);
-        font-family: var(--ff3);
-        font-size: 0.9rem;
-        padding: 5px 0;
-        width: 100%;
-        text-align: left;
+.side_bar .Header h1 {
+    font-family: "Bitcount Grid Single", system-ui;
+    color: white;
+    font-size: 1.2rem;
+}
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        p{  
-            margin-left: 5px;
-            color: var(--color120);
-            text-align: left;
-        }
-        button{
-            border: none;
-            background-color: none;
-            background-color: transparent;
-            border: none;
-            color: var(--color120);
-            font-family: var(--ff3);
-            cursor: pointer;
-            padding: 8px 10px;
-            width: 100%;
-            text-align: left;
+/* ==============================
+   SEARCH CONTAINER
+============================== */
+.side_bar .search-container {
+    /* background-color: blue; temp visual aid */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
 
-            display: flex;
-            align-items: center;
-            gap : 10px;
-            border-radius: 5px;
+.side_bar .search-container button {
+    border: none;
+    background: transparent;
+    border-radius: 10px 0 0 10px;
+    width: 30px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            svg{
-                margin-left: -5px;
-                stroke: white;
-                width: 18px;
-                height: 18px;
-            }
-        }
-    }
-    .pages-container button:hover{
-        background: hsl(0, 50%, 50%);
-    }
+.side_bar .search-container button svg {
+    stroke: white;
+}
+
+.side_bar .search-container input[type=text] {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+
+/* ==============================
+   PAGES CONTAINER
+============================== */
+.side_bar .pages-container {
+    /* background: rgba(255, 0, 0, 0.308);  temp visual aid */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-left: -10px;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.side_bar .pages-container button {
+    /* background: rgb(255, 0, 0); */
+    border: none; 
+    background-color: none; 
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.side_bar .pages-container button svg {
+    stroke: white;
+    width: 20px;
+    height: 20px;
+}
+
+/* ==============================
+   FOOTER CONTAINER
+============================== */
+.side_bar .footer-container {
+    margin-top: auto;
+    background: cadetblue;
+    color: var(--color90);
+    font-family: var(--ff3);
+    font-size: 0.9rem;
+    padding: 5px 0;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side_bar .footer-container p {
+    margin-left: 5px;
+    color: var(--color120);
+}
+
+.side_bar .footer-container button {
+    border: none;
+    background: transparent;
+    color: var(--color120);
+    font-family: var(--ff3);
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.side_bar .footer-container button svg {
+    stroke: white;
+    width: 18px;
+    height: 18px;
+}
+
+/* ==============================
+   COLLAPSED SIDEBAR STATE
+============================== */
+.side_bar.collapsed {
+    width: 80px;
+}
+
+/* Hide text & inputs when collapsed */
+.side_bar.collapsed h1,
+.side_bar.collapsed p,
+.side_bar.collapsed span {
+    display: none;
+}
+
+/* Center icons */
+.side_bar.collapsed button {
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.side_bar.collapsed .search-container input[type="text"] {
+    display: none;
+}
+
+.side_bar.collapsed .search-container {
+    justify-content: center;
+    background: transparent;
+    border: none;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.side_bar.collapsed .search-container button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+}
+
+.side_bar.collapsed .search-container button svg {
+    stroke: white;
+}
+
+/* Optional: rotate the menu icon */
+.side_bar.collapsed .Header svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
