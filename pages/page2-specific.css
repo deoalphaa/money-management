@@ -151,6 +151,14 @@
     span {
         color: white;
     }
+
+    span:hover {
+        color: cadetblue;
+    }
+
+    svg:hover {
+        stroke:cadetblue;
+    }
 }
 
 .side_bar .pages-container button svg {
