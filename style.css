@@ -45,13 +45,11 @@ h1{
 .nav {
     display: flex;                          /*biar gampang diatur*/
     flex-direction: column;
-    /* justify-content: space-between;         untuk jarak antara element sama kiri kanan
-    align-items: center;                    supaya semua sejajar */
-    padding: 2rem 5%;                     /*rem itu bilangan dikali 16px, % itu jarak spasi kanan kiri*/
-    height: 100vh;
-    width: 300px;
+    justify-content: space-between;         /*untuk jarak antara element sama kiri kanan*/
+    align-items: center;                    /*supaya semua sejajar*/
+    padding: 1.8rem 5%;                     /*rem itu bilangan dikali 16px, % itu jarak spasi kanan kiri*/
     background-color: rgba(0, 0, 0, 0.8); /*rgba, a itu untuk transparency*/
-    /* border-bottom: 1px solid var(--color120);  line tipis dibawah navigation bar */
+    border-bottom: 1px solid var(--color120);  /*line tipis dibawah navigation bar*/
     position: fixed;                        /*biar pas di scroll navbarnya ga kemana"*/
     top: 0;
     right: 0;
