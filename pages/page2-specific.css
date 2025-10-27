@@ -56,12 +56,12 @@
         margin-left: 10px;
         h1{
             font-family: "Bitcount Grid Single", system-ui;
-            color: rgb(255, 255, 255);
+            color: var(--color120);
         }
     }
     .search-container {
         /*pusing kli buat ini co aku gpt banyak kli*/
-        background-color: blue; /*biar keliatan aja*/
+        background-color: grey; /*biar keliatan aja*/
         width: 100%;
         display: flex;
         button{
@@ -113,7 +113,7 @@
             border-radius: 5px;
 
             svg{
-                margin-left: -10px;
+                margin-left: 2px;
                 stroke: white;
                 width: 20px;
                 height: 20px;
@@ -164,5 +164,8 @@
                 height: 18px;
             }
         }
+    }
+    .pages-container button:hover{
+        background: hsl(0, 50%, 50%);
     }
 }
