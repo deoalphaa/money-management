@@ -139,7 +139,6 @@
     background-color: none; 
     background-color: transparent;
     font-family: "Poppins", sans-serif;
-    color: white;
     cursor: pointer;
     padding: 8px 10px;
     width: 100%;
@@ -148,6 +147,10 @@
     align-items: center;
     gap: 5px;
     border-radius: 5px;
+
+    span {
+        color: white;
+    }
 }
 
 .side_bar .pages-container button svg {
