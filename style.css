@@ -44,22 +44,51 @@ h1{
 
 .nav {
     display: flex;                          /*biar gampang diatur*/
-    justify-content: space-between;         /*untuk jarak antara element sama kiri kanan*/
-    align-items: center;                    /*supaya semua sejajar*/
-    padding: 1.8rem 5%;                     /*rem itu bilangan dikali 16px, % itu jarak spasi kanan kiri*/
+    flex-direction: column;
+    /* justify-content: space-between;         untuk jarak antara element sama kiri kanan
+    align-items: center;                    supaya semua sejajar */
+    padding: 2rem 5%;                     /*rem itu bilangan dikali 16px, % itu jarak spasi kanan kiri*/
+    height: 100vh;
+    width: 300px;
     background-color: rgba(0, 0, 0, 0.8); /*rgba, a itu untuk transparency*/
-    border-bottom: 1px solid var(--color120);  /*line tipis dibawah navigation bar*/
+    /* border-bottom: 1px solid var(--color120);  line tipis dibawah navigation bar */
     position: fixed;                        /*biar pas di scroll navbarnya ga kemana"*/
     top: 0;
     right: 0;
     left: 0;
-    z-index: 99999;
+}
+
+.navbarlogo {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    button {
+        border: gray; /*ni aneh kli kntl sumpah coba ko hapus ama ga hapus */
+        border-radius: 10px 0px 0px 10px;
+        width: 30px;
+        cursor: pointer;
+        padding: 0;
+        svg{
+            stroke: black;
+        }
+    }
+
+    input[type=text]{
+            margin-left: 2px;
+            border-radius : 0px 10px 10px 0px; 
+            border: gray; /*ni aneh kli kntl sumpah coba ko hapus ama ga hapus */
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            opacity: 50%;
+        }
 }
 
 .nav .title {
     font-size: 2.2rem;
     font-weight: 700;
     color: var(--color120);
+    margin-bottom: 20px;
 }
 
 .navbar a {
@@ -80,13 +109,10 @@ h1{
 }
 
 .navbarlogo {
-    color: var(--color120);
+    svg:hover {
+        stroke: var(--color90);
+    }
 }
-
-.navbarlogo a:hover {
-    color: var(--color90);
-}
-
 /* p{
     font: var(--p);
     background: var(--color30);
