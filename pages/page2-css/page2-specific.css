@@ -56,6 +56,15 @@
     align-items: center;
 }
 
+.side_bar .Header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.side_bar .Header h1 a:hover {
+    color: cadetblue;
+}
+
 .side_bar .Header button {
     border: none;
     background: transparent;
@@ -136,7 +145,6 @@
 .side_bar .pages-container button {
     /* background: rgb(255, 0, 0); */
     border: none; 
-    background-color: none; 
     background-color: transparent;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
@@ -145,19 +153,13 @@
     text-align: left;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     border-radius: 5px;
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
 
     span {
         color: white;
-    }
-
-    span:hover {
-        color: cadetblue;
-    }
-
-    svg:hover {
-        stroke:cadetblue;
     }
 }
 
@@ -165,6 +167,10 @@
     stroke: white;
     width: 20px;
     height: 20px;
+}
+
+.side_bar .pages-container button:hover {
+    background-color:  cadetblue;
 }
 
 /* ==============================
@@ -181,7 +187,6 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .side_bar .footer-container p {
@@ -196,10 +201,9 @@
     font-family: var(--ff3);
     cursor: pointer;
     padding: 8px 10px;
-    width: 100%;
-    text-align: left;
+    width: 40%;
+    margin-left: -8px;
     display: flex;
-    align-items: center;
     gap: 10px;
     border-radius: 5px;
 }
@@ -208,6 +212,10 @@
     stroke: white;
     width: 18px;
     height: 18px;
+}
+
+.side_bar .footer-container button:hover {
+    background-color:  rgba(255, 255, 255, 0.445);
 }
 
 /* ==============================
