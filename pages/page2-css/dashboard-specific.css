@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: rgb(0, 0, 0);
+    --color10: hsl(31, 80%, 10%);
+    --color30: hsl(31, 80%, 30%);
+    --color90: hsl(31, 57%, 60%);
+    --color100: hsl(0, 49%, 82%);
+    --color120: rgb(255, 255, 255);
+    --accent: hsl(31, 80%, 70%);
+    --ff: "Noto Sans JP", serif;
+    --ff2: "Fira Sans", serif;
+    --ff3: "Helvetica", sans-serif;
+    --p: 1rem/1.5em var(--ff);
+    --h1: 600 3rem/1.2em var(--ff3);
+    --h2: 600 2rem/1.2em var(--ff2);
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+}
+
+/* ==============================
+   SIDEBAR BASE
+============================== */
+.side_bar {
+    background-color: rgb(80, 80, 80);
+    height: 100vh;
+    width: 300px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.side_bar .Header {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.side_bar .Header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.side_bar .Header h1 a:hover {
+    color: cadetblue;
+}
+
+.side_bar .Header button {
+    border: none;
+    background: transparent;
+    color: var(--color120);
+    font-family: var(--ff3);
+    cursor: pointer;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.side_bar .Header button svg {
+    stroke: white;
+}
+
+.side_bar .Header h1 {
+    font-family: "Bitcount Grid Single", system-ui;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* ==============================
+   SEARCH CONTAINER
+============================== */
+.side_bar .search-container {
+    /* background-color: blue; temp visual aid */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.side_bar .search-container button {
+    border: none;
+    background: transparent;
+    border-radius: 10px 0 0 10px;
+    width: 30px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side_bar .search-container button svg {
+    stroke: white;
+}
+
+.side_bar .search-container input[type=text] {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+
+/* ==============================
+   PAGES CONTAINER
+============================== */
+.side_bar .pages-container {
+    /* background: rgba(255, 0, 0, 0.308);  temp visual aid */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-left: -10px;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.side_bar .pages-container button {
+    /* background: rgb(255, 0, 0); */
+    border: none; 
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    span {
+        color: white;
+    }
+}
+
+.side_bar .pages-container button svg {
+    stroke: white;
+    width: 20px;
+    height: 20px;
+}
+
+.side_bar .pages-container button:hover {
+    background-color:  cadetblue;
+}
+
+/* ==============================
+   FOOTER CONTAINER
+============================== */
+
+.side_bar .footer-container {
+    margin-top: auto;
+    background: rgb(65, 120, 125);
+    color: var(--color120);
+    font-family: var(--ff3);
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.side_bar .footer-container p {
+    color: var(--color120);
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.side_bar .footer-container button {
+    border: none;
+    background: transparent;
+    color: var(--color120);
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    padding: 8px 12px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.side_bar .footer-container button svg {
+    stroke: white;
+    width: 18px;
+    height: 18px;
+    transition: stroke 0.3s ease;
+}
+
+.side_bar .footer-container button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.side_bar .footer-container button:hover svg {
+    stroke: white;
+}
+
+/* ==============================
+   COLLAPSED SIDEBAR STATE
+============================== */
+.side_bar.collapsed {
+    width: 80px;
+}
+
+/* Hide text & inputs when collapsed */
+.side_bar.collapsed h1,
+.side_bar.collapsed p,
+.side_bar.collapsed span {
+    display: none;
+}
+
+/* Center icons */
+.side_bar.collapsed button {
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.side_bar.collapsed .search-container input[type="text"] {
+    display: none;
+}
+
+.side_bar.collapsed .search-container {
+    justify-content: center;
+    background: transparent;
+    border: none;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.side_bar.collapsed .search-container button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+}
+
+.side_bar.collapsed .search-container button svg {
+    stroke: white;
+}
+
+/* Optional: rotate the menu icon */
+.side_bar.collapsed .Header svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* ==============================
+         MAIN Header
+============================== */
+
+/* ==============================
+   MAIN LAYOUT
+============================== */
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* MAIN CONTENT AREA */
+.main_content {
+    flex: 1;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN HEADER */
+.main_header {
+    width: 100%;
+    padding: 20px 30px;
+    background: rgb(255, 0, 0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main_header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* CONTENT BELOW HEADER */
+.content_area {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    gap: 30px
+}
+
+.money-spent-this-month{
+    background-color: rgb(255, 255, 255);
+    width: 220px;
+    height: 100px;
+    border: 3px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+.money-spent-this-month h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.total-investment {
+    background-color: rgb(255, 255, 255);
+    width: 220px;
+    height: 100px;
+    border: 3px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.total-investment h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}

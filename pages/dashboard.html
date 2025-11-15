@@ -5,43 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Money Management</title>
 
-  <link rel="stylesheet" href="page2-css/page2-specific.css">
+  <link rel="stylesheet" href="page2-css/dashboard-specific.css">
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
-  <div class="side_bar">
-    <!-- HEADER -->
-    <div class="Header">
-      <button id="toggle-btn">
-        <i data-feather="menu"></i>
-        <h1><a href="../index.html">Money Management</a></h1>
-      </button>
-    </div>
-    <!-- SEARCH -->
-    <div class="search-container">
-      <button><i data-feather="search"></i></button>
-      <input type="text" placeholder="Search..." name="search">
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="side_bar" id="sidebar">
+      <div class="Header">
+        <button id="toggle-btn">
+          <i data-feather="menu"></i>
+          <h1><a href="../index.html">Money Management</a></h1>
+        </button>
+      </div>
+
+      <div class="search-container">
+        <button><i data-feather="search"></i></button>
+        <input type="text" placeholder="Search..." name="search">
+      </div>
+
+      <div class="pages-container">
+        <button onclick="document.location='dashboard.html'"><i data-feather="grid"></i> <span>Dashboard</span></button>
+        <button onclick="document.location='history.html'"><i data-feather="clock"></i> <span>History</span></button>
+        <button onclick="document.location='wallet.html'"><i data-feather="credit-card"></i> <span>Wallet</span></button>
+        <button onclick="document.location='report.html'"><i data-feather="pie-chart"></i> <span>Report</span></button>
+        <button onclick="document.location='settings.html'"><i data-feather="settings"></i> <span>Settings</span></button>
+      </div>
+
+      <div class="footer-container">
+        <p>Tip : Use the Quick Add to record expenses on the go.</p>
+        <button><i data-feather="download"></i> <span>Export CSV</span></button>
+      </div>
     </div>
 
-    <!-- PAGES -->
-    <div class="pages-container">
-      <button onclick="document.location='dashboard.html'"><i data-feather="grid"></i> <span>Dashboard</span></button>
-      <button onclick="document.location='history.html'"><i data-feather="clock"></i> <span>History</span></button>
-      <button onclick="document.location='wallet.html'"><i data-feather="credit-card"></i> <span>Wallet</span></button>
-      <button onclick="document.location='report.html'"><i data-feather="pie-chart"></i> <span>Report</span></button>
-      <button onclick="document.location='settings.html'"><i data-feather="settings"></i> <span>Settings</span></button>
+    <!-- MAIN CONTENT -->
+    <div class="main_content">
+      <header class="main_header">
+        <h1>Dashboard</h1>
+      </header>
+
+      <div class="content_area">
+        <div class="money-spent-this-month">
+          <h2>Money spent this Month</h2>
+        </div>
+        <div class="total-investment">
+          <h2>Investment amount</h2>
+        </div>
+      </div>
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer-container">
-      <p>Tip : Use the Quick Add to record expenses on the go.</p>
-      <button><i data-feather="download"></i> <span>Export CSV</span></button>
-    </div>
   </div>
 
-  <script src="../script.js"></script>
-  </script>
+<script>
+  // Sidebar Toggle
+  const toggleBtn = document.getElementById("toggle-btn");
+  const sidebar = document.getElementById("sidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+  });
+
+  feather.replace();
+</script>
+
 </body>
 </html>
